@@ -1,0 +1,1858 @@
+<meta charset="UTF-8" />
+<meta content="initial-scale=1, maximum-scale=1" name="viewport" />
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+<style type="text/css">
+/*12677*/
+:root{
+    --dark: #1e1e1e;
+    --light: #fff;
+    --pale-pink: #ffd9d8;
+    --medium-pink: #feb3b3;
+    --blue: #3291f7;
+    --light-blue : #509def;
+    --yellow: #ffd300;
+    --red: #ff5050;
+}
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        font-family: 'Roboto Mono', monospace;;
+        background-color:  var(--light);
+    }
+
+    body, html {
+        padding: 0;
+        line-height: normal;
+        font-family: 'Roboto Mono', monospace;
+        color: var(--dark);
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        font-weight: 400;
+        font-style: normal;
+        -webkit-overflow-scrolling: touch;
+}
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+    }
+
+    body{
+        scroll-behavior: smooth;
+    }
+
+    .wrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 52px;
+        font-weight: 700;
+    }
+
+    h2{
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.3;
+    }
+
+    h3{
+        font-size: 24;
+        font-weight: 700;
+    }
+
+    h4{
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    h5{
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    h6{
+        font-size: 45px;
+        font-weight: 700;
+    }</style>
+<style type="text/css">
+.screen{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-color: var(--light);
+            border-bottom: 2px solid var(--dark);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .screen-one{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .screen-two{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scroll_button{
+            background-color: var(--blue);
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--dark);
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .screen-one .scroll_button{
+            right: 3%;
+        }
+
+
+        /*first screen*/
+        .picture{
+            width: 40%;
+            background-color: var(--pale-pink);
+            height: 100vh;
+            border: 1px solid var(--dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .main-illustrate svg{
+            width: 97%;
+        }
+
+        .text-content{
+            width: 60%;
+        }
+
+        .text--content{
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .text--content h2, .bottom-content h2 {
+            padding: 30px 0;
+        }
+
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .buttons h3:nth-child(2){
+            cursor: pointer;
+            margin: 0 0 0 40px;
+            border-bottom: 2px solid transparent;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        .buttons h3:nth-child(2):hover{
+            border-color: var(--dark);
+        }
+
+        .buttons h3:first-child, .info-box h3{
+            border-bottom: 2px solid transparent;
+            transition: 0.5s;
+        }
+
+        .buttons a{
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        /*.buttons h3:first-child:hover{
+            border-color: var(--light);
+        }*/
+
+        .button{
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 2% 5%;
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .text-content{
+            position: relative;
+        }
+
+        #svg-one, #svg-two, #svg-three, #svg-four, #svg-five{
+            position: absolute;
+        }
+
+        #svg-one{
+            top: 0%;
+            right: 17%;
+            transform: rotate(20deg);
+        }
+
+        #svg-two{
+            right: -4%;
+            bottom: 21%;
+            transform: rotate(255deg);
+        }
+
+        #svg-three{
+            bottom: 0%;
+            right: 40%;
+            transform: rotate(337deg);
+        }
+
+        #svg-four{
+            bottom: 19%;
+            left: 10%;
+            transform: rotate(162deg);
+        }
+
+        #svg-five{
+            bottom: 18%;
+            right: 8%;
+            transform: rotate(70deg);
+        }
+
+
+        /*second screen*/
+        .top-section , .bottom-section{
+            height: 50%;
+        }
+
+        .top-section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-top: 10%;
+            width: 90%;
+        }
+
+        .bottom-section{
+            width: 100%;
+            text-align: center;
+            background-color: var(--pale-pink);
+            border-left: 1px solid var(--dark);
+            border-right: 1px solid var(--dark);
+            border-top: 1px solid var(--dark);
+            display: flex;
+            align-items: flex-start;
+            padding-top: 7%;
+        }
+
+        .bottom-content{
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .bottom-content h2{
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .box{
+            width: 30%;
+            text-align: center;
+            position: relative;
+        }
+
+        #arrow{
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid var(--light);
+            border-right: 3px solid var(--light);
+            transform: rotate(315deg) translate(0px, 0px);
+            margin: 10px;
+            transition: 0.5s;
+        }
+
+        .box h1 {
+            color:var(--blue);
+            text-shadow: -4px 4px 0 var(--medium-pink);
+            padding-bottom: 10px;
+        }
+
+        .text-box h2{
+            font-weight: 500;
+        }
+
+        .text-box{
+            background-color: var(--pale-pink);
+            border: 1px solid var(--dark);
+            padding: 13px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .double{
+            background-color: var(--medium-pink);
+            border: 1px solid var(--dark);
+            position: absolute;
+            bottom: -8px;
+            left: -8px;
+            z-index: 1;
+            height: 55%;
+            width: 100%
+        }
+
+        .bottom-section h6{
+            color: var(--dark);
+        }
+
+        /*.button span:hover{
+            transform: rotate(315deg) translate(15px, 15px);
+        }*/
+
+        /*third screen*/
+
+        .counter-box {
+            display: inline-block;
+            background-color: var(--yellow);
+            height: 50px;
+            width: 50px;
+            padding: 0 13px;
+            border: 1px solid var(--dark);
+            margin: 30px 13px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .counter-box:first-child{
+            margin: 30px 13px 0px 0;
+        }
+
+        .slider{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 70%;
+            padding-top: 8%;
+        }
+
+        .slider-box{
+            background-color: var(--pale-pink);
+            width: 100%;
+            border: 1px solid var(--dark);
+            height: 400px;
+            margin-top: 30px;
+        }
+
+        .slider-box h5{
+            padding: 40px 0;
+        }
+
+        .header-box{
+            background-color: var(--medium-pink);
+            width: 100%;
+            border-bottom: 1px solid var(--dark);
+            color:var(--red);
+        }
+
+        .slider-box h4, .slider-box h5{
+            padding-left: 10px;
+        }
+
+        .counter-box:first-child{
+            background-color: var(--red);
+        }
+
+        .cube-figure{
+            position: absolute;
+            bottom: 3%;
+            right: 4%;
+            width: 33%;
+            transform: rotate(349deg);
+            z-index: 100;
+        }
+
+        .header-box h6{
+            font-size: 35px;
+        }
+
+        /*fourth screen*/
+
+        .screen-four{
+            background-color: var(--pale-pink);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .section-left, .section-right{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-box{
+            width: 85%;
+            max-width: 500px;
+            background-color: var(--light);
+            border: 1px solid var(--dark);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 60px auto 0;
+            padding: 0 50px;
+        }
+
+        .info-box h6{
+            padding-top: 60px;
+        }
+
+        .info-box h5{
+            padding: 25px 0 50px;
+        }
+
+        .info-box .button{
+            margin-bottom: 75px;
+        }
+
+        .info-illustration svg {
+            width: 100%;
+        }</style>
+<style type="text/css">
+/*mobile version*/
+@media screen and (max-width:600px){
+  /*screen-one*/
+    .screen-one{
+        flex-direction: column-reverse;
+    }
+
+    .picture{
+        width: 100%;
+        height: 40%;
+        background-color: var(--light);
+        border-color: var(--light);
+    }
+
+    .main-illustrate svg{
+        width: 80%;
+        padding-bottom: 0%;
+    }
+
+    .text-content{
+        width: 100%;
+        height: 45%;
+    }
+
+    .text--content{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: 17px;
+    }
+
+    .buttons a{
+        display: none;
+    }
+
+    #svg-two{
+        right: -17%;
+    }
+
+    #svg-three{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    /*screen-two*/
+    .top-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box{
+        width: 80%;
+    }
+
+    .bottom-content{
+        width: 100%;
+    }
+
+    h6{
+        font-size: 26px;
+    }
+
+    .top-section{
+        height: 65%;
+        padding-top: 0%;
+        justify-content: space-evenly;
+    }
+
+    .bottom-content h2{
+        font-size: 19px;
+    }
+
+    .bottom-section{
+        height: 35%;
+    }
+
+    .bottom-content h2{
+        width: 90%;
+    }
+
+    #svg-four{
+        bottom: 0%;
+        left: -18%;
+    }
+
+    #svg-five{
+        bottom: 7%;
+        right: -19%;
+    }
+
+}
+
+
+@media screen and (max-width:600px){
+    /*screen-three*/
+    .slider{
+        width: 90%;
+        z-index: 100;
+        padding-top: 0%;
+    }
+
+    .slider-box{
+        height: 445px;
+    }
+
+    .slider-box h5{
+        padding: 20px 0;
+        padding-left: 10px;
+    }
+
+    h4{
+        font-size: 30px;
+    }
+
+    .counter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .counter-box{
+        height: 40px;
+        width: 40px;
+        margin: 30px 7px;
+        padding: 0 10px;
+    }
+
+    .counter-box:first-child{
+        margin: 30px 7px;
+    }
+
+    .slider-box h5{
+        font-size: 16px;
+    }
+
+    .cube-figure{
+        z-index: 0;
+        bottom: -120px;
+        right: -200px;
+        width: 130%;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    /*screen-four*/
+    .screen-four{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-left, .section-right{
+        width: 100%;
+    }
+
+    .section-left{
+        padding-bottom: 100px;
+        z-index: 100;
+        position: relative;
+    }
+
+    .info-box{
+        width: 90%;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .info-box .button{
+        margin-bottom: 22px;
+    }
+
+    .info-illustration svg{
+        display: none;
+    }
+}</style>
+<style type="text/css">
+/*form-css*/
+    .modal {
+            display: none;
+            opacity: 0;
+            transition: .3s
+        }
+    
+        .modal.visible {
+            align-items: center;
+            background: rgba(0, 0, 0, .5);
+            bottom: 0;
+            display: flex;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            justify-content: center;
+            opacity: 1;
+            overflow: auto;
+            position: fixed;
+            z-index: 100
+        }
+    
+        .modal.visible,
+        .modal__header {
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%
+        }
+    
+        .modal__header {
+            height: 50px;
+            position: absolute
+        }
+    
+        @media only screen and (min-width:1024px) {
+            .modal__header {
+                background-size: cover;
+                height: 80px
+            }
+        }
+    
+        .modal__wrapper {
+            display: flex;
+            height: 100%;
+            max-width: 450px;
+            padding: 0 15px
+        }
+    
+        .modal__body,
+        .modal__wrapper {
+            box-sizing: border-box;
+            width: 100%
+        }
+    
+        .modal__body {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative
+        }
+    
+        .modal__body--form {
+            border-radius: 0;
+            margin: auto;
+            padding: 30px 50px 20px
+        }
+    
+        .modal__close {
+            color: #7c7c7c;
+            cursor: pointer;
+            display: block;
+            height: 21px;
+            margin-left: 0;
+            margin-top: 0;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 21px;
+            z-index: 2
+        }
+    
+        .modal__close:before {
+            transform: rotate(-45deg)
+        }
+    
+        .modal__close:after,
+        .modal__close:before {
+            background-color: currentColor;
+            content: "";
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 10px;
+            width: 21px
+        }
+    
+        .modal__close:after {
+            transform: rotate(45deg)
+        }
+    
+        .modal__logo {
+            display: none;
+            margin: 30px auto 20px
+        }
+    
+        .modal__title {
+            color: #4db65c;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: .9px;
+            line-height: 30px;
+            margin: 20px auto;
+            text-align: center
+        }
+    
+        @media only screen and (max-width:479px) {
+            .modal__body--form {
+                padding: 30px 20px 40px
+            }
+    
+            .form input[type=checkbox]+label:before {
+                background: #5305ce;
+                border: 1px solid #979797;
+                border-radius: 4px;
+                color: transparent;
+                content: "\2714";
+                height: 16px;
+                padding-bottom: 3px;
+                padding-left: 2px;
+                transition: .2s;
+                vertical-align: bottom;
+                width: 16px;
+            }
+    
+            .form input[type=checkbox]+label:before {
+                background: #fff;
+                border-radius: 50%;
+                box-sizing: border-box;
+                content: "";
+                display: inline-block;
+                height: 20px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                vertical-align: text-top;
+                width: 20px;
+            }
+        }
+    
+        @media only screen and (max-width:320px) {
+            .modal__wrapper {
+                padding: 0
+            }
+    
+            .modal__body--form {
+                border-radius: 0
+            }
+        }
+    
+        .exit-pp {
+            display: none;
+            font-family: Lato, arial, sans-serif;
+            opacity: 0;
+            transition: .3s
+        }
+    
+        .exit-pp.visible {
+            align-items: center;
+            background: rgba(3, 3, 67, .6);
+            bottom: 0;
+            display: flex;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            justify-content: center;
+            left: 0;
+            opacity: 1;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 100
+        }
+    
+        .exit-pp-wrap {
+            margin: auto;
+            padding: 60px 0
+        }
+    
+        .exit-pp__content {
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 280px;
+            flex-direction: column;
+            font-weight: 400;
+            justify-content: flex-start;
+            padding: 178px 20px 50px 10px;
+            position: relative
+        }
+    
+        .exit-pp__content__picture {
+            left: 10px;
+            max-height: 210px;
+            top: -62px
+        }
+    
+        .exit-pp__content__title {
+            color: #000343;
+            font-size: 32px;
+            letter-spacing: .34px;
+            line-height: 38px;
+            margin: 15px 0 20px
+        }
+    
+        .exit-pp__content__title--big {
+            color: #000;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 46px;
+            margin: 0 0 5px;
+            text-transform: uppercase
+        }
+    
+        .exit-pp__content__title--small {
+            font-size: 24px;
+            letter-spacing: .1px;
+            line-height: 29px;
+            margin: 8px 0
+        }
+    
+        .exit-pp__content__text {
+            color: #000343;
+            font-size: 16px;
+            letter-spacing: .05px;
+            line-height: 22px;
+            margin-top: 4px;
+            text-align: left
+        }
+    
+        .exit-pp__risk-warning {
+            bottom: -30px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            left: 0;
+            line-height: 14px;
+            position: absolute;
+            text-align: center;
+            width: 100%
+        }
+    
+        .exit-pp .main-screen__form {
+            flex: 0 0 300px;
+            padding-top: 24px
+        }
+    
+        .exit-pp .main-screen__form__logo {
+            margin: 12px auto 20px;
+            width: 160px
+        }
+    
+        .exit-pp__close {
+            background: transparent;
+            color: transparent;
+            cursor: pointer;
+            display: block;
+            height: 28px;
+            margin-left: 0;
+            margin-top: 0;
+            position: absolute;
+            right: 22px;
+            top: -50px;
+            width: 28px;
+            z-index: 2
+        }
+    
+        .exit-pp__close:before {
+            transform: rotate(-45deg)
+        }
+    
+        .exit-pp__close:after,
+        .exit-pp__close:before {
+            background-color: #fff;
+            content: "";
+            height: 2px;
+            left: -6px;
+            position: absolute;
+            top: 13px;
+            width: 38px
+        }
+    
+        .exit-pp__close:after {
+            transform: rotate(45deg)
+        }
+    
+        .exit-pp .main-screen__form-x {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            min-width: 800px;
+            overflow: visible;
+            padding: 0 68px;
+            position: relative;
+            width: 800px
+        }
+    
+        .exit-pp .form,
+        .exit-pp .form__input {
+            font-family: Lato, arial, sans-serif
+        }
+    
+        .exit-pp .form__group-btn {
+            padding: 0 0 13px
+        }
+    
+        .exit-pp .form__btn-submit {
+            font-family: Lato, arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            height: 50px;
+            letter-spacing: .9px;
+            line-height: 19px;
+            padding: 0 10px
+        }
+    
+        .exit-pp .form input[type=checkbox]+label {
+            line-height: 20px
+        }
+    
+        .exit-pp .form__group:last-child {
+            min-height: 52px
+        }
+    
+        .overflow-hidden {
+            overflow: hidden
+        }
+    
+        .payment {
+            background-color: #f2f6fe
+        }
+    
+        .payment__pay-icons-wrapper {
+            background: #f2f6fe;
+            margin: 0 auto;
+            padding: 30px 0;
+            width: 90%
+        }
+    
+        .payment__pay-icons-row {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5px
+        }
+    
+        .payment__pay-item-wrapper {
+            align-items: center;
+            border-right: 1px solid #dde0ea;
+            box-sizing: border-box;
+            display: flex;
+            flex-shrink: 0;
+            height: 50px;
+            justify-content: center
+        }
+    
+        .payment .owl-nav button.owl-next,
+        .payment .owl-nav button.owl-prev {
+            background-color: #f2f6fe;
+            color: hsla(0, 0%, 50.2%, .32);
+            font-size: 55px;
+            line-height: 65px
+        }
+    
+        .payment .owl-stage-outer {
+            margin: 0 auto;
+            width: calc(100% - 5px)
+        }
+    
+        .payment .owl-prev {
+            display: block;
+            left: 8px;
+            position: absolute;
+            top: 40%;
+            transform: translate(-50%, -50%)
+        }
+    
+        .payment .owl-prev:after {
+            content: "";
+            display: block;
+            height: 100%;
+            left: 15px;
+            position: absolute;
+            top: 0;
+            width: 5px
+        }
+    
+        .payment .owl-next {
+            background-color: #f2f6fe;
+            display: block;
+            position: absolute;
+            right: -8px;
+            top: 40%;
+            transform: translate(-50%, -50%)
+        }
+    
+        .payment__pay-item--visa {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -274px -349px;
+            height: 21px;
+            width: 61px
+        }
+    
+        .payment__pay-item--vpay {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -74px -398px;
+            height: 35px;
+            width: 31px
+        }
+    
+        .payment__pay-item--veryvisa {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -294px;
+            height: 35px;
+            width: 69px
+        }
+    
+        .payment__pay-item--mastercard {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -398px;
+            height: 35px;
+            width: 44px
+        }
+    
+        .payment__pay-item--maestro {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -422px -176px;
+            height: 35px;
+            width: 44px
+        }
+    
+        .payment__pay-item--securecode {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -349px;
+            height: 29px;
+            width: 77px
+        }
+    
+        .payment__pay-item--skrill {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -192px -349px;
+            height: 21px;
+            width: 62px
+        }
+    
+        .payment__pay-item--neteller {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -328px -294px;
+            height: 16px;
+            width: 90px
+        }
+    
+        .payment__pay-item--safecharge {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -248px -10px;
+            height: 36px;
+            transform: scale(.7);
+            width: 224px
+        }
+    
+        .payment__pay-item--mir {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -248px -66px;
+            height: 36px;
+            transform: scale(.7);
+            width: 210px
+        }
+    
+        .payment__pay-item--wirecard {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -211px -294px;
+            height: 20px;
+            width: 97px
+        }
+    
+        .payment__pay-item--decta {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -248px -122px;
+            height: 34px;
+            transform: scale(.7);
+            width: 170px
+        }
+    
+        .payment__pay-item--payvision {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -256px -240px;
+            height: 20px;
+            width: 114px
+        }
+    
+        .payment__pay-item--ssl {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -107px -349px;
+            height: 26px;
+            width: 65px
+        }
+    
+        .payment__pay-item--orange {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -10px;
+            height: 68px;
+            transform: scale(.7);
+            width: 218px
+        }
+    
+        .payment__pay-item--inpay {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -248px -176px;
+            height: 38px;
+            transform: scale(.6);
+            width: 154px
+        }
+    
+        .payment__pay-item--emerch {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -240px;
+            height: 34px;
+            transform: scale(.7);
+            width: 226px
+        }
+    
+        .payment__pay-item--trust {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -98px;
+            height: 62px;
+            transform: scale(.7);
+            width: 192px
+        }
+    
+        .payment__pay-item--power {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -10px -180px;
+            height: 40px;
+            transform: scale(.6);
+            width: 216px
+        }
+    
+        .payment__pay-item--paysafe {
+            background: url(http://img.mobilenobo.net/CucUVCZ0l11kG5L.png) -99px -294px;
+            border-right: none;
+            height: 23px;
+            width: 92px
+        }
+    
+        .form {
+            font-family: Source Sans Pro, sans-serif;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    
+        .form__group:last-child .is-error {
+            padding-left: 28px
+        }
+    
+        .form__group {
+            min-height: 46px;
+            transition: .3s
+        }
+    
+        .form__group--error-wrapper {
+            min-height: 24px
+        }
+    
+        .form__group-check-box {
+            margin-bottom: 10px;
+            min-height: 46px
+        }
+    
+        .form__group-check-box__group-check-box .form__group-check-box--valid-height {
+            min-height: 74px
+        }
+    
+        .form__group-check-box .form__error {
+            padding-left: 28px
+        }
+    
+        .form__input {
+            border: 1px solid #d1d2dd;
+            border-radius: 0px;
+            box-sizing: border-box;
+            display: flex;
+            font-size: 14px;
+            height: 40px;
+            padding: 5px 10px;
+            position: relative;
+            width: 100%
+        }
+    
+        .form__input:focus {
+            border-color: #3f2e7a;
+            color: #3f2e7a;
+            outline: none
+        }
+    
+        .form__input--tel {
+            width: calc(100% - 85px)
+        }
+    
+        .form__btn-submit {
+            align-self: center;
+            background: var(--dark);
+            border-radius: 0px;
+            color: #fff;
+            display: flex;
+            font-size: 18px;
+            font-weight: 300;
+            height: 50px;
+            justify-content: center;
+            min-width: 250px;
+            padding: 10px;
+            text-align: center;
+            transition: .3s;
+            width: 100%
+        }
+    
+        .form__btn-submit,
+        .form__btn-submit:focus {
+            border: 0;
+            outline: none
+        }
+    
+        .form__btn-submit:hover {
+            background: #ffa947;
+            border: 0;
+            outline: none
+        }
+    
+        .form__group-btn-wait {
+            display: none;
+            opacity: 0;
+            transition: .3s
+        }
+    
+        .form__group-btn {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 18px
+        }
+    
+        .form__label {
+            padding-left: 12px
+        }
+    
+        .form__tel-select-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+    
+        .form__link-wrapper {
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            user-select: none
+        }
+    
+        .form__link-wrapper a {
+            color: #7985a7
+        }
+    
+        .form.js-loading .form__group-btn-submit,
+        .form.js-success .form__group-btn-submit {
+            display: none;
+            opacity: 0;
+            transition: .3s
+        }
+    
+        .form.js-loading .form__group-btn-wait,
+        .form.js-success .form__group-btn-wait {
+            display: inline-block;
+            opacity: 1;
+            transition: .3s
+        }
+    
+        .form input[type=checkbox]+label {
+            color: #9791b8;
+            display: block;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 21px;
+            margin: .2em 0;
+            padding: .2em .2em .2em 28px
+        }
+    
+        .form input[type=checkbox] {
+            display: none
+        }
+    
+        .form input[type=checkbox]+label:before {
+            background: #5305ce;
+            border: 1px solid #979797;
+            border-radius: 4px;
+            color: transparent;
+            content: "\2714";
+            height: 16px;
+            padding-bottom: 3px;
+            padding-left: 2px;
+            transition: .2s;
+            vertical-align: bottom;
+            width: 16px
+        }
+    
+        .form input[type=checkbox] {
+            opacity: 0;
+            position: absolute
+        }
+    
+        .form input[type=checkbox]+label {
+            cursor: pointer;
+            padding: 0 0 0 25px;
+            position: relative
+        }
+    
+        .form input[type=checkbox]+label:before {
+            background: #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            content: "";
+            display: inline-block;
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            vertical-align: text-top;
+            width: 20px
+        }
+    
+        .form input[type=checkbox]:focus+label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, .12)
+        }
+    
+        .form input[type=checkbox]:checked+label:before {
+            background: #5305ce;
+            border-color: #5305ce
+        }
+    
+        .form input[type=checkbox]:disabled+label {
+            color: #b8b8b8;
+            cursor: auto
+        }
+    
+        .form input[type=checkbox]:disabled+label:before {
+            background: #ddd;
+            box-shadow: none
+        }
+    
+        .form input[type=checkbox]:checked+label:after {
+            background: #fff;
+            box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+            content: "";
+            height: 2px;
+            left: 5px;
+            position: absolute;
+            top: 9px;
+            transform: rotate(45deg);
+            width: 2px
+        }
+    
+        .form span.is-error {
+            color: #fc5246;
+            font-size: 11px;
+            font-weight: 300;
+            padding-left: 8px;
+            padding-top: 2px
+        }
+    
+        .form span.is-error:nth-child(5) {
+            padding-left: 20px
+        }
+    
+        .form .intl-tel-input {
+            display: block;
+            width: 100%
+        }
+    
+        .form__group-btn+.form__group-check-box {
+            min-height: 28px
+        }
+    
+        .form__group.container__error .form__input.is-error {
+            border-color: #fc5246
+        }
+    
+        .main-screen__form__logo {
+            margin: 0px 0 28px;
+            width: 50%
+        }
+    
+        .icon {
+            border-bottom: 1px solid;
+            border-left: 1px solid;
+            color: #000;
+            height: 8px;
+            margin-left: 3px;
+            margin-top: 4px;
+            position: absolute;
+            transform: rotate(-45deg);
+            width: 14px
+        }
+    
+        .country-list {
+            border-radius: 4px;
+            top: 52px;
+            width: 340px
+        }
+    
+        .country-list:focus,
+        .selected-flag:focus {
+            outline: none
+        }
+    
+        body .form-wrapper .intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+            background-color: rgba(0, 0, 0, .05)
+        }
+    
+        body label {
+            font-weight: 300
+        }
+    
+        .flag-container {
+            direction: ltr
+        }
+    
+        html:lang(ar) .form input[type=checkbox]+label {
+            padding: 0 25px 0 0
+        }
+    
+        html:lang(ar) .form input[type=checkbox]+label:before {
+            left: auto;
+            margin: 0;
+            right: 0
+        }
+    
+        html:lang(ar) .form input[type=checkbox]+label:after {
+            left: auto;
+            right: 13px
+        }
+    
+        ::-webkit-input-placeholder {
+            color: #aaa
+        }
+    
+        ::-moz-placeholder {
+            color: #aaa
+        }
+    
+        :-ms-input-placeholder {
+            color: #aaa
+        }
+    
+        :-moz-placeholder {
+            color: #aaa
+        }
+    
+        .main-screen__form {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .main-screen__form-x {
+            background: #fff;
+            border-radius: 0px;
+            font-size: 16px;
+            max-height: 100%;
+            max-width: 400px;
+            overflow-y: auto;
+            padding: 10px 20px;
+            position: relative;
+            width: 95%
+        }
+    
+    
+        .main-screen__form-x-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px
+        }
+    
+        .modal__button-x {
+            cursor: pointer;
+            text-align: right
+        }
+    
+        .form__group {
+            min-height: 62px
+        }
+    
+        .form__group.form__group--error-wrapper {
+            min-height: 24px;
+            min-height: auto
+        }
+    
+        .form__btn-submit {
+            align-items: center;
+            background-color: var(--dark);
+            border-radius: 0px;
+            cursor: pointer;
+            height: 46px;
+            transition: .6s;
+            text-decoration: none;
+        }
+    
+        .form__btn-submit:hover {
+            background: linear-gradient(to bottom, #ff8f00, #fce034);
+        }
+    
+        .form-wrap {
+            background-color: #fff;
+            border-radius: 10px;
+            font-family: Source Sans Pro, sans-serif;
+            margin: auto;
+            max-width: 400px;
+            padding: 31px 31px 0;
+            position: relative;
+            width: 80%
+        }
+    
+        .form-wrap__title-h2 {
+            color: #333;
+            text-align: center
+        }
+    
+        @media (max-width:575.98px) {
+            .form-wrap {
+                padding: 10px 10px 0;
+                width: 95%
+            }
+        }
+    
+        .modal__button-x {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 20px
+        }
+    
+    
+        .form-wrap__title-h3 {
+            color: #333;
+            font-family: Source Sans Pro, sans-serif;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase
+        }
+    
+        @media only screen and (max-width:320px) {
+            .main-screen__form__logo {
+                margin: 0px 0 10px
+            }
+    
+            .main-screen__form-x-btn {
+                top: 12px
+            }
+    
+            .form__group {
+                min-height: 62px
+            }
+    
+            .form__group.form__group--error-wrapper {
+                min-height: auto
+            }
+    
+            .form__group-btn+.form__group-check-box {
+                min-height: 24px
+            }
+    
+            .form__group-btn {
+                padding: 0 0 8px
+            }
+        }</style>
+<style type="text/css">
+.form__input{
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .form__group-btn-submit{
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .main-screen__form-x{
+            border: 1px solid var(--dark);
+        }
+
+        .modal.visible{
+            background: #ffd9d8cc;
+        }
+
+        .form__btn-submit:hover {
+            background: rgb(46,46,46);
+        }</style>
+<div class="wrapper">
+	<div class="screen screen-one">
+		<div class="picture">
+			<div class="main-illustrate">
+				<svg fill="none" height="550" viewbox="0 0 452 448" width="550" xmlns="http://www.w3.org/2000/svg"> <rect fill="white" height="419" stroke="black" width="535" x="-105.5" y="28.5"></rect> <rect fill="white" height="419" stroke="black" width="535" x="-94.5" y="15.5"></rect> <rect fill="white" height="419" stroke="black" width="535" x="-83.5" y="0.5"></rect> <rect fill="#FEB3B3" height="58" stroke="black" width="535" x="-83.5" y="1.5"></rect> <path d="M410 18L439 47M439 18L410 47" stroke="black"></path> <rect height="17.6316" stroke="black" width="29.2763" x="344.645" y="18.5789"></rect> <rect height="17.6316" stroke="black" width="29.2763" x="353.961" y="29.4474"></rect> <line stroke="black" x1="289" x2="319" y1="36.5" y2="36.5"></line> <rect fill="white" height="257" stroke="black" width="43" x="397.5" y="77.5"></rect> <rect fill="#FEB3B3" height="43" stroke="black" width="43" x="397.5" y="77.5"></rect> <rect fill="#FEB3B3" height="18" stroke="black" transform="matrix(1 0 0 -1 397 139)" width="43" x="0.5" y="-0.5"></rect> <rect fill="#FEB3B3" height="43" stroke="black" width="43" x="397.5" y="291.5"></rect> <path d="M418.5 323L431.057 307.25H405.943L418.5 323Z" fill="#1E1E1E"></path> <path d="M419.5 88L406.943 103.75L432.057 103.75L419.5 88Z" fill="#1E1E1E"></path> <rect fill="white" height="437" stroke="black" transform="rotate(-90 -40.5 378.5)" width="43" x="-40.5" y="378.5"></rect> <rect fill="#FEB3B3" height="43" stroke="black" transform="rotate(-90 -40.5 378.5)" width="43" x="-40.5" y="378.5"></rect> <rect fill="#FEB3B3" height="192" stroke="black" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 296 378)" width="43" x="-0.5" y="-0.5"></rect> <rect fill="#FEB3B3" height="43" stroke="black" transform="rotate(-90 353.5 378.5)" width="43" x="353.5" y="378.5"></rect> <path d="M385 357.5L369.25 344.943L369.25 370.057L385 357.5Z" fill="#1E1E1E"></path> <path d="M434.5 345L407.5 372" stroke="#1E1E1E"></path> <path d="M435 358L421 372" stroke="#1E1E1E"></path> <circle cx="66.5" cy="145.5" fill="#3291F7" r="45" stroke="#1E1E1E"></circle> <path d="M175.5 100.818L185.509 113.783L185.717 114.054L186.045 113.958L201.763 109.352L202.24 125.724L202.25 126.065L202.571 126.18L217.995 131.693L208.757 145.218L208.565 145.5L208.757 145.782L217.995 159.307L202.571 164.82L202.25 164.935L202.24 165.276L201.763 181.648L186.045 177.042L185.717 176.946L185.509 177.217L175.5 190.182L165.491 177.217L165.283 176.946L164.955 177.042L149.237 181.648L148.76 165.276L148.75 164.935L148.429 164.82L133.005 159.307L142.243 145.782L142.435 145.5L142.243 145.218L133.005 131.693L148.429 126.18L148.75 126.065L148.76 125.724L149.237 109.352L164.955 113.958L165.283 114.054L165.491 113.783L175.5 100.818Z" fill="#FFD300" stroke="#1E1E1E"></path> <rect fill="#FF5050" height="90" stroke="#1E1E1E" width="90" x="234.5" y="100.5"></rect> <ellipse cx="54.6094" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <ellipse cx="77.375" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <ellipse cx="164.188" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <ellipse cx="187.688" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <ellipse cx="267.609" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <ellipse cx="291.109" cy="135.648" fill="#1E1E1E" rx="6.60938" ry="10.6484"></ellipse> <rect fill="#1E1E1E" height="46" width="7" x="212" y="236"></rect> <rect fill="#1E1E1E" height="7" width="14" x="198" y="229"></rect> <rect fill="#1E1E1E" height="7" width="14" x="198" y="282"></rect> <rect fill="#1E1E1E" height="7" width="14" x="219" y="229"></rect> <rect fill="#1E1E1E" height="7" width="14" x="219" y="282"></rect> </svg></div>
+		</div>
+		<div class="text-content">
+			<div class="text--content">
+				<h1>
+					Your honest<br />
+					trading platform</h1>
+				<h2>
+					Start trading now on the platform chosen by traders from all over the world.</h2>
+				<div class="buttons">
+					<div class="button h-button">
+						<h3>
+							Login to BiPro</h3>
+						<div id="arrow">
+						</div>
+					</div>
+					<h3>
+						<a href="#screen_link_2">Learn more</a></h3>
+				</div>
+			</div>
+		</div>
+		<svg fill="none" height="50" id="svg-one" viewbox="0 0 155 50" width="155" xmlns="http://www.w3.org/2000/svg"> <path d="M150.067 3.87989L130.041 29.3565L104.695 10.2565L87.4467 35.3427L63.0262 16.1125L45.7781 41.1987L23.2095 21.7082L5.96141 46.7944" stroke="#1E1E1E" stroke-width="4"></path> </svg> <svg fill="none" height="50" id="svg-two" viewbox="0 0 155 50" width="155" xmlns="http://www.w3.org/2000/svg"> <path d="M150.067 3.87989L130.041 29.3565L104.695 10.2565L87.4467 35.3427L63.0262 16.1125L45.7781 41.1987L23.2095 21.7082L5.96141 46.7944" stroke="#1E1E1E" stroke-width="4"></path> </svg> <svg fill="none" height="50" id="svg-three" viewbox="0 0 155 50" width="155" xmlns="http://www.w3.org/2000/svg"> <path d="M150.067 3.87989L130.041 29.3565L104.695 10.2565L87.4467 35.3427L63.0262 16.1125L45.7781 41.1987L23.2095 21.7082L5.96141 46.7944" stroke="#1E1E1E" stroke-width="4"></path> </svg></div>
+	<div class="screen screen-two">
+		<div class="top-section">
+			<div class="box">
+				<h1 class="number">
+					964 615</h1>
+				<div class="text-box">
+					<h2>
+						Traders trade<br />
+						every day</h2>
+				</div>
+				<div class="double">
+				</div>
+			</div>
+			<div class="box">
+				<h1 class="number">
+					133</h1>
+				<div class="text-box">
+					<h2>
+						Countries where the<br />
+						platform is present</h2>
+				</div>
+				<div class="double">
+				</div>
+			</div>
+			<div class="box">
+				<h1 class="number">
+					35 788 523</h1>
+				<div class="text-box">
+					<h2>
+						Successful trading<br />
+						last week</h2>
+				</div>
+				<div class="double">
+				</div>
+			</div>
+		</div>
+		<div class="bottom-section">
+			<div class="bottom-content">
+				<h6>
+					5 myths about trading</h6>
+				<h2>
+					Traiding frighten newcomers.<br />
+					But is it scary? Let&#39;s find out.</h2>
+			</div>
+			<svg fill="none" height="50" id="svg-four" viewbox="0 0 155 50" width="155" xmlns="http://www.w3.org/2000/svg"> <path d="M150.067 3.87989L130.041 29.3565L104.695 10.2565L87.4467 35.3427L63.0262 16.1125L45.7781 41.1987L23.2095 21.7082L5.96141 46.7944" stroke="#1E1E1E" stroke-width="4"></path> </svg> <svg fill="none" height="50" id="svg-five" viewbox="0 0 155 50" width="155" xmlns="http://www.w3.org/2000/svg"> <path d="M150.067 3.87989L130.041 29.3565L104.695 10.2565L87.4467 35.3427L63.0262 16.1125L45.7781 41.1987L23.2095 21.7082L5.96141 46.7944" stroke="#1E1E1E" stroke-width="4"></path> </svg></div>
+	</div>
+	<div class="screen screen-three">
+		<div class="slider">
+			<div class="slider-box">
+				<div class="header-box">
+					<h6>
+						This is a scam</h6>
+				</div>
+				<h5>
+					Trading on BiPro is transparent. You trade on real price charts and set trading terms. You can see changes in price movements in real-time and your predictions are correct.<br />
+					BiPro is regulated by the Financial Commission and is certified.</h5>
+			</div>
+			<div class="counter">
+				<div class="counter-box">
+					<h4 id="counter">
+						1</h4>
+				</div>
+				<div class="counter-box">
+					<h4 id="counter">
+						2</h4>
+				</div>
+				<div class="counter-box">
+					<h4 id="counter">
+						3</h4>
+				</div>
+				<div class="counter-box">
+					<h4 id="counter">
+						4</h4>
+				</div>
+				<div class="counter-box">
+					<h4 id="counter">
+						5</h4>
+				</div>
+			</div>
+		</div>
+		<svg class="cube-figure" fill="none" height="497" viewbox="0 0 631 497" width="631" xmlns="http://www.w3.org/2000/svg"> <path d="M182.045 285.037L295.868 187.126L275.878 129.53L160.53 223.046L182.045 285.037Z" fill="#3291F7" stroke="#1E1E1E"></path> <path d="M294.73 189.516L441.967 195.83L419.579 131.325L273.903 129.508L294.73 189.516Z" fill="#FF5050" stroke="#1E1E1E"></path> <path d="M369.912 406.133L62.5344 360.892L30.5942 268.865L332.321 297.825L369.912 406.133Z" fill="#FF5050" stroke="#1E1E1E"></path> <path d="M369.912 406.133L583.171 180.193L551.231 88.1659L332.322 297.825L369.912 406.133Z" fill="#3291F7" stroke="#1E1E1E"></path> <path d="M393.999 238.745L429.998 342.468" stroke="#1E1E1E"></path> <path d="M450.665 184.476L485.204 283.993" stroke="#1E1E1E"></path> <path d="M502.914 134.442L536.103 230.069" stroke="#1E1E1E"></path> <path d="M246.911 288.479L283.318 393.377" stroke="#1E1E1E"></path> <path d="M169.203 282.164L203.743 381.681" stroke="#1E1E1E"></path> <path d="M97.2042 275.254L130.394 370.881" stroke="#1E1E1E"></path> <path d="M218.031 175.789L238.959 236.088" stroke="#1E1E1E"></path> <path d="M347.376 130.43L368.83 192.245" stroke="#1E1E1E"></path> <path d="M551.232 88.1656L466.992 88.8013L324.785 89.8846L260.319 90.3656L210.966 128.723L97.0778 217.189L30.5954 268.865L332.323 297.824L505.038 132.403L551.232 88.1656ZM309.239 232.457L160.531 223.046L275.871 129.505L419.576 131.312L309.239 232.457Z" fill="#FFD300" stroke="#1E1E1E"></path> <path d="M450.665 184.476L362.703 183.969" stroke="#1E1E1E"></path> <path d="M347.376 130.43L395.609 89.3338" stroke="#1E1E1E"></path> <path d="M393.998 238.745L95.2568 219.448" stroke="#1E1E1E"></path> <path d="M218.031 175.789L153.238 173.37" stroke="#1E1E1E"></path> <path d="M502.195 132.371L210.961 128.711" stroke="#1E1E1E"></path> <path d="M246.911 288.479L469.122 88.7838" stroke="#1E1E1E"></path> <path d="M169.203 282.164L238.756 226.125" stroke="#1E1E1E"></path> <path d="M97.2041 275.253L325.685 89.8694" stroke="#1E1E1E"></path> </svg></div>
+	<div class="screen screen-four">
+		<div class="section-left">
+			<div class="info-box">
+				<h6>
+					Choose trading<br />
+					as a new hobby</h6>
+				<h5>
+					As you know, trading can be a really fun hobby. This myth arose due to a lack of information and adequate preparation from users. But BiPro stands ready to provide clarity and confidence.</h5>
+				<div class="button h-button">
+					<h3>
+						Select</h3>
+					<div id="arrow">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-right">
+			<div class="info-illustration">
+				<svg fill="none" height="630" viewbox="0 0 495 564" width="590" xmlns="http://www.w3.org/2000/svg"> <rect fill="#3291F7" height="413" stroke="black" width="318" x="0.5" y="51.5"></rect> <rect fill="#FEB3B3" height="67" stroke="#1E1E1E" width="318" x="0.5" y="51.5"></rect> <path d="M270.411 70L301.043 99M301.043 70L270.411 99" stroke="black"></path> <line stroke="black" x1="198.583" x2="230.271" y1="83.5" y2="83.5"></line> <rect fill="#FF5050" height="413" stroke="black" width="301" x="68.5" y="150.5"></rect> <rect fill="#FEB3B3" height="67" stroke="#1E1E1E" width="301" x="68.5" y="150.5"></rect> <path d="M324 169L353 198M353 169L324 198" stroke="black"></path> <line stroke="black" x1="256" x2="286" y1="182.5" y2="182.5"></line> <rect fill="#FFD300" height="413" stroke="black" width="301" x="122.5" y="0.5"></rect> <rect fill="#FEB3B3" height="67" stroke="#1E1E1E" width="301" x="122.5" y="0.5"></rect> <path d="M378 19L407 48M407 19L378 48" stroke="black"></path> <line stroke="black" x1="310" x2="340" y1="32.5" y2="32.5"></line> <rect fill="white" height="413" stroke="black" width="301" x="174.5" y="108.5"></rect> <rect fill="#FEB3B3" height="67" stroke="#1E1E1E" width="301" x="174.5" y="108.5"></rect> <path d="M430 127L459 156M459 127L430 156" stroke="black"></path> <line stroke="black" x1="362" x2="392" y1="140.5" y2="140.5"></line> <rect fill="#1E1E1E" height="46" width="7" x="232" y="397"></rect> <rect fill="#1E1E1E" height="7" width="14" x="218" y="390"></rect> <rect fill="#1E1E1E" height="7" width="14" x="218" y="443"></rect> <rect fill="#1E1E1E" height="7" width="14" x="239" y="390"></rect> <rect fill="#1E1E1E" height="7" width="14" x="239" y="443"></rect> <g clip-path="url(#clip0_102:225)"> <path d="M269.084 195.216L356.693 212.57L276.906 311.743L198.641 282.774L269.084 195.216Z" fill="#FF5050" stroke="#1E1E1E"></path> <path d="M356.693 212.57L392.406 294.431L321.963 381.99L276.906 311.743L356.693 212.57Z" fill="#3291F7" stroke="#1E1E1E"></path> <path d="M247.438 348.371L199.393 283.053L276.906 311.743L321.519 381.306L247.438 348.371Z" fill="#FFD300" stroke="#1E1E1E"></path> <path d="M248.606 301.263L325.016 206.289" stroke="#1E1E1E"></path> <path d="M222.615 291.643L295.922 200.526" stroke="#1E1E1E"></path> <path d="M308.166 360.47L381.472 269.353" stroke="#1E1E1E"></path> <path d="M293.192 337.134L369.601 242.16" stroke="#1E1E1E"></path> <path d="M368.93 323.61L330.098 245.628" stroke="#1E1E1E"></path> <path d="M345.447 352.8L303.083 277.948" stroke="#1E1E1E"></path> <path d="M330.098 245.628L245.609 224.395" stroke="#1E1E1E"></path> <path d="M302.693 278.433L222.125 253.584" stroke="#1E1E1E"></path> <path d="M292.669 337.784L217.575 307.772" stroke="#1E1E1E"></path> <path d="M308.166 360.471L232.917 328.629" stroke="#1E1E1E"></path> <path d="M248.606 301.263L294.701 369.387" stroke="#1E1E1E"></path> <path d="M222.615 291.643L269.832 358.328" stroke="#1E1E1E"></path> </g> <g style="mix-blend-mode:difference"> <path d="M373.031 371.879L468.886 434.456L378.766 486.208L373.031 371.879Z" fill="#FFD9D8"></path> <rect fill="#FFD9D8" height="54" transform="rotate(-29.8672 406.688 450.57)" width="20" x="406.688" y="450.57"></rect> </g> <defs> <clippath id="clip0_102:225"> <rect fill="white" height="176.189" transform="translate(309.955 399.611) rotate(-141.182)" width="161.658"></rect> </clippath> </defs> </svg></div>
+		</div>
+	</div>
+	<div class="modal">
+		<div class="main-screen__form-x">
+			<div class="main-screen__form">
+				<div class="credential_picker_container">
+					<div data-callback="onSignIn" data-client_id="123972858330-r0hkdbg0mue272bii00lgtn52gf2cea8.apps.googleusercontent.com" id="g_id_onload">
+					</div>
+				</div>
+				<div class="form" id="form-64574666-3579-4b08-a3dd-13a465114ad4" novalidate="novalidate">
+					<div class="form__group form__group-input">
+						<input class="form__input name" name="name" placeholder="First Name" required="" type="text" /></div>
+					<div class="form__group form__group-input">
+						<input class="form__input lname" name="lname" placeholder="Last Name" required="" type="text" /></div>
+					<div class="form__group form__group-input">
+						<input class="form__input phone" maxlength="15" name="phone" placeholder="Telephone number" required="" type="tel" value="+44" /></div>
+					<div class="form__group form__group-input">
+						<input class="form__input email" maxlength="32" name="email" placeholder="Email" required="" type="email" /></div>
+					<div class="form__group-btn" style="padding-top: 10px;">
+						<button class="form__btn-submit" href="http://gwb8a.rdtk.io/click" type="submit"><span class="form__group-btn-submit"></span>
+						<h3>
+							<span class="form__group-btn-submit">Start Now</span></h3>
+						<span class="form__group-btn-wait"> Please Wait </span></button></div>
+				</div>
+				<div class="main-screen__form-x-btn">
+					<img src="http://img.mobilenobo.net/AmDOc5VT6QBFXvu.svg" /></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script>
+/*submit-button animation*/
+    $(".button").mouseenter(function(){
+        $('.button h3').css({'border-color':'var(--light)'});
+        $('.button #arrow').css({'transform' : 'translate(15px, 0px) rotate(315deg)'});
+        $('.button').css({'background-color' : '#2e2e2e'});
+        $(this).mouseleave(function(){
+            $('.button h3').css({'border-color':'transparent'});
+            $('.button #arrow').css({'transform' : 'translate(0px, 0px) rotate(315deg)'});
+            $('.button').css({'background-color' : 'var(--dark)'});
+        });
+    });
+</script><script>
+    /*creating button to next screen, checks if we are not on the last screen if so - we are going up*/
+    function scroll_button(page){
+        let screen_link = page + 1 ;
+        let deg = 45 ;
+        let margin = 8;
+        let marginmove = margin + 4;
+        if(page == $('.screen').length){
+            screen_link= 1;
+            deg = 225;
+            margin = 16;
+            marginmove = margin - 4;
+        };
+        console.log(page);
+        console.log('.screen:nth-child('+ screen_link +')');
+        $('.screen:nth-child('+ screen_link +')').attr('id', 'screen_link_'+ screen_link +'');
+        $('.screen:nth-child('+ page +')').append('<a class="scroll_button" href="#screen_link_'+ screen_link +'"><div id="arrow"></div></a>');
+        $('.screen:nth-child('+ page +') .scroll_button #arrow').css({'transform' : 'rotate(' + deg + 'deg)'}).css({'border-color' : 'var(--dark)'}).css({'transition' : '0.3s'}).css({'margin-top':''+ margin +'px'}).css({'z-index':'1000'}).css({'position':'relative'});
+        $('.screen:nth-child('+ page +') .scroll_button').mouseenter(function(){
+            $(this).css({'background-color' : 'var(--light-blue'});
+            $('.screen:nth-child('+ page +') .scroll_button #arrow').css({'margin-top':''+ marginmove +'px'});
+            $(this).mouseleave(function(){
+                $(this).css({'background-color' : 'var(--blue)'});
+                $('.screen:nth-child('+ page +') .scroll_button #arrow').css({'margin-top':''+ margin +'px'});
+            });
+        });
+    };
+    /*add button to screen 1-5*/
+    for(let i = 1 ; i<=$('.screen').length ; i++) {
+         scroll_button(i);
+    };
+</script><script>
+    /*slider*/
+    /*all counters switch color to yellow*/
+    function erase() {
+            var n=1;
+            while(n<=5){
+                    $('.counter-box:nth-child(' + n + ')').css({'background-color' : 'var(--yellow)'});
+                    n++;
+            };
+    };
+
+    /*changes text on click*/
+    $(".counter-box:nth-child(1)").click(function(){
+        erase();
+        $(this).css({'background-color' : 'var(--red)'});
+        $('.slider-box h4').html("This is a scam");
+        $('.slider-box h5').html("Trading on BiPro is transparent. You trade on real price charts and set trading terms. You can see changes in price movements in real-time and your predictions are correct.<br>BiPro is regulated by the Financial Commission and is certified.");
+    });
+
+    $(".counter-box:nth-child(2)").click(function(){
+        erase();
+        $(this).css({'background-color' : 'var(--red)'});
+        $('.slider-box h4').html("Too complicated");
+        $('.slider-box h5').html("You don't need to have a bachelor's degree in economics to start trading. The rules are clear: you need to set the conditions and make a prediction as to whether the price will move up or down.<br>Watch our tutorials and read strategy instructions to improve your trading skills. Still in doubt? Just use a demo account for risk-free learning.");
+    });
+
+    $(".counter-box:nth-child(3)").click(function(){
+        erase();
+        $(this).css({'background-color' : 'var(--red)'});
+        $('.slider-box h4').html("Trading costs a lot of money");
+        $('.slider-box h5').html("The minimum deposit at BiPro is only $100. And trading starts from $10. Start with small nominal trades, gain experience and slowly increase your account.<br>If you are new to trading, we recommend that you practice on a demo account. The demo account is completely free. When you feel comfortable, switch to a real account and start trading.");
+    });
+
+    $(".counter-box:nth-child(4)").click(function(){
+        erase();
+        $(this).css({'background-color' : 'var(--red)'});
+        $('.slider-box h4').html("It's risky");
+        $('.slider-box h5').html("Risk comes with careless decisions. Reduce your risk with competent strategy and wise money management. Start with small trades from $10 and increase the amount as you become comfortable.<br>Traders with Gold and VIP status can take advantage of BiPro's special offers: weekly cashback and deposit guarantee.");
+    });
+
+    $(".counter-box:nth-child(5)").click(function(){
+        erase();
+        $(this).css({'background-color' : 'var(--red)'});
+        $('.slider-box h4').html("Trading takes a lot of time");
+        $('.slider-box h5').html("BiPro is a flexible trading system. You can open short trades and get results in 1 minute. In addition, you can open a trade at one time.<br>BiPro is with you whenever you feel comfortable: use the web version of the platform or install our Android or iOS app.");
+    });
+
+</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>
+    $('.h-button').on('click', function () {
+        $('.modal').toggleClass('visible');
+    });
+    $('.main-screen__form-x-btn').on('click', function () {
+        $('.modal').removeClass('visible');
+    });
+</script><!-- BACKGROUND --><!-- BACKGROUND ENDS -->
